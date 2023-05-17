@@ -1,0 +1,154 @@
+body{
+    font-family: sans-serif;
+}
+
+.firstpage{
+    background-image: url(images/voterhindifront1.jpg);
+    height: 500px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 30px;
+    width: 320px;
+    float: none;
+    position: relative;
+    font-size: 17px;
+    margin-bottom: 20px;
+
+}
+.secondpage{
+    background-image: url(images/back-new9.jpeg);
+    height: 500px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 30px;
+    width: 320px;
+    float: none;
+    position: relative;
+    font-size: 12px;
+    margin-bottom: 20px;
+    font-weight: 550;
+    box-sizing: border-box;
+    padding: 14px;
+
+}
+img.barcode {
+    width: 120px;
+    height: 30px;
+    position: absolute;
+    top: 78px;
+    left: 50px;
+}
+.epicnumber {
+    position: absolute;
+    top: 82px;
+    left: 175px;
+    font-weight: 550;
+    font-size: 18.5px;
+}
+img.picture {
+    width: 140px;
+    height: 186px;
+}
+.settable {
+    position: absolute;
+    top: 331px;
+    left: 25px;
+}
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    white-space: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-size: medium;
+    font-style: normal;
+    color: -internal-quirk-inherit;
+    text-align: start;
+    border-spacing: 2px;
+    border-color: gray;
+    font-variant: normal;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+td {
+    font-size: 15.5px;
+    display: table-cell;
+    vertical-align: inherit;
+}
+.imagecontainer{
+    position: absolute;
+    top: 123px;
+    left: 91px;
+}
+.secondpage .gender {
+    margin-bottom: 4px;
+}
+.gender span.label, .dob span.label {
+    width: 116px;
+    display: inline-block;
+}
+.gender span.value {
+    text-transform: capitalize;
+}
+.secondpage .dob {
+    position: relative;
+    margin-bottom: 4px;
+}
+.dob span.label {
+    width: 116px;
+    display: inline-block;
+}
+.secondpage .dob span.value {
+    top: -5px;
+    position: relative;
+}
+.address_regional {
+    margin-bottom: 5px;
+}
+.address {
+    margin-bottom: 60px;
+}
+.nirvachan {
+    margin-bottom: 10px;
+}
+.nirvachan:before, .nirvachan:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+.nirvachan .date {
+    width: 100px;
+    float: left;
+}
+.nirvachan .nirvachanofficer {
+    float: right;
+    width: 160px;
+    text-align: right;
+    position: relative;
+}
+img.officersign {
+    position: absolute;
+    top: -69px;
+    left: 20px;
+}
+
+.assemballysankhya {
+    margin-bottom: 10px;
+}
+
+.assemballysankhya .regional {
+    margin-bottom: 4px;
+}
+.bhagsankhya .regional {
+    margin-bottom: 4px;
+}

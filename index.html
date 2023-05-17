@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Voter ID Generator</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <h1>Voter ID Generator</h1>
+    <form id="voterForm">
+        <label for="imageUpload">Upload Image:</label>
+        <input type="file" id="imageUpload" accept="image/*">
+        <br>
+        <label for="epicno">Enter EPIC Number</label>
+        <input type="text" id="epicno">
+        <br>
+        <label for="nameInput1">Name in English:</label>
+        <input type="text" id="nameInput1">
+        <br>
+        <label for="nameInput2">Name in Hindi:</label>
+        <input type="text" id="nameInput2">
+        <br>
+        <label for="fatherNameInput1">Father's Name / Husband's Name in Hindi:</label>
+        <input type="text" id="fatherNameInput1">
+        <br>
+        <label for="fatherNameInput2">Father's Name / Husband's Name in English:</label>
+        <input type="text" id="fatherNameInput2">
+        <br>
+        <label for="genderInput1">Gender in Hindi :</label>
+        <input type="text" id="genderInput1">
+        <br>
+        <label for="genderInput2">Gender in English :</label>
+        <input type="text" id="genderInput2">
+        <br>
+        <label for="ageInput">Age :</label>
+        <input type="text" id="ageInput">
+        <br>
+        <label for="addressInput1">Address in Hindi :</label>
+        <input type="text" id="addressInput1">
+        <br>
+        <label for="addressInput2">Address in English :</label>
+        <input type="text" id="addressInput2">
+        <br>
+        <label for="dateInput">Date :</label>
+        <input type="text" id="dateInput">
+        <br>
+        <label for="assemblyInput1">विधानसभा निर्वाचन क्षेत्र संख्या और नाम :</label>
+        <input type="text" id="assemblyInput1">
+        <br>
+        <label for="assemblyInput2">Assembly Constituency No. &amp; Name :</label>
+        <input type="text" id="assemblyInput2">
+        <br>
+        <label for="partInput1">भाग संख्या और नाम :</label>
+        <input type="text" id="partInput1">
+        <br>
+        <label for="partInput2">Part No. &amp; Name :</label>
+        <input type="text" id="partInput2">
+        <br>
+        <br>
+        <button type="submit">Generate Voter ID</button>
+    </form>
+    <div class="container" id ="vansh" style="margin-top:50px;display:none;">
+        <div class="row">
+            <div class="firstpage">
+                <img id="barcodeImage" src="https://generator.barcodetools.com/barcode.png?gen=0&data=GSG2381168&bcolor=FEAFB0&fcolor=000000&tcolor=000000&fh=14&bred=0&w2n=2.5&xdim=2&w=&h=120&debug=1&btype=7&angle=0&quiet=0&balign=2&talign=0&guarg=1&text=0&tdown=1&stst=1&schk=0&cchk=1&ntxt=1&c128=0" class="barcode">
+                <div class="epicnumber"></div>
+                <div class="imagecontainer">
+                    <img id="pic" src="" class="picture">
+                </div>
+                <div class="settable">
+                    <table class="tablecss" style="font-weight:bold;font-size:12px">
+                        <tbody>
+                            <tr>
+                                <td style="padding-bottom: 15px;">नाम</td>
+                                <td id="hindiname"style="padding-bottom: 15px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="padding-bottom: 15px;">Name</td>
+                                <td id="englishname"style="padding-bottom: 15px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="padding-bottom: 15px;">पति का नाम</td>
+                                <td id="fnamehindi"style="padding-bottom: 15px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="padding-bottom: 15px;">Husband Name<br>/ Father's Name</td>
+                                <td id="fnameenglish"style="padding-bottom: 15px;"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="secondpage">
+                <div class="gender">
+                    <span class="label">लिंग/Sex</span>
+                    <span id="gendervalue"></span>
+                </div>
+
+                <div class="dob">
+                    <span class="label">जन्मतिथि/आयु
+                        <br>Date Of Birth/Age</span>
+                    <span id="dobvalue"></span>
+                </div>
+
+                <div class="address_regional">
+                    <span class="label">पता : </span>
+                    <span id="addhindi"></span>
+                </div>
+
+                <div class="address">
+                    <span class="label">Address : </span>
+                    <span id="addenglish"></span>
+                </div>
+
+                <div class="nirvachan">
+                    <div class="date">
+                        <span class="label">Date:</span>
+                        <span id="datevalue"></span>
+                    </div>
+
+                    <div class="nirvachanofficer">
+                        <img class="officersign" src="images/votersign2.jpg">
+                        <span class="label">निर्वाचक रजिस्ट्रीकरण अधिकारी<br>Electoral Registration Officer</span>
+                    </div>
+                </div>
+
+                <div class="assemballysankhya">
+                    <div class="regional">
+                        <span class="label">विधानसभा निर्वाचन क्षेत्र संख्या और नाम : </span>
+                        <span id="nhindi"><br></span>
+                    </div>
+
+                    <div class="actual">Assembly Constituency No. &amp; Name :
+                        <span id="nenglish"><br></span>
+                    </div>
+                </div>
+
+                <div class="bhagsankhya">
+                    <div class="regional">
+                        <span class="label">भाग संख्या और नाम : </span>
+                        <span id="phindi"></span>
+                    </div>
+
+                    <div class="actual">Part No. &amp; Name :
+                        <span id="penglish"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript code for generating voter ID
+        window.onload = function () {
+            const form = document.getElementById("voterForm");
+            form.addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent form submission
+
+                // Get form input values
+                const epicno = document.getElementById("epicno").value;
+                const nameInput1 = document.getElementById("nameInput1").value;
+                const nameInput2 = document.getElementById("nameInput2").value;
+                const fatherNameInput1 = document.getElementById("fatherNameInput1").value;
+                const fatherNameInput2 = document.getElementById("fatherNameInput2").value;
+                const genderInput1 = document.getElementById("genderInput1").value;
+                const genderInput2 = document.getElementById("genderInput2").value;
+                const ageInput = document.getElementById("ageInput").value;
+                const addressInput1 = document.getElementById("addressInput1").value;
+                const addressInput2 = document.getElementById("addressInput2").value;
+                const dateInput = document.getElementById("dateInput").value;
+                const assemblyInput1 = document.getElementById("assemblyInput1").value;
+                const assemblyInput2 = document.getElementById("assemblyInput2").value;
+                const partInput1 = document.getElementById("partInput1").value;
+                const partInput2 = document.getElementById("partInput2").value;
+
+                // Update the elements in the template with the input values
+                document.querySelector(".epicnumber").textContent = epicno;
+                document.getElementById("pic").src = getImageUrl();
+                document.getElementById("hindiname").innerHTML = ": " +nameInput1;
+                document.getElementById("englishname").innerHTML = ": " +nameInput2;
+                document.getElementById("fnamehindi").innerHTML = ": " +fatherNameInput1;
+                document.getElementById("fnameenglish").innerHTML =": " +fatherNameInput2;
+                document.getElementById("gendervalue").innerHTML = genderInput1;
+                document.getElementById("dobvalue").innerHTML = ageInput;
+                document.getElementById("addhindi").innerHTML = addressInput1;
+                document.getElementById("addenglish").innerHTML = addressInput2;
+                document.getElementById("datevalue").innerHTML = dateInput;
+                document.getElementById("nhindi").innerHTML = assemblyInput1;
+                document.getElementById("nenglish").innerHTML = assemblyInput2;
+                document.getElementById("phindi").textContent = partInput1;
+                document.getElementById("penglish").textContent = partInput2;
+
+                // Show the generated voter ID
+                document.getElementById("vansh").style.display = "block";
+            });
+
+            // Function to get the uploaded image URL
+            function getImageUrl() {
+                const imageUpload = document.getElementById("imageUpload");
+                if (imageUpload.files.length > 0) {
+                    return URL.createObjectURL(imageUpload.files[0]);
+                }
+                return ""; // Return empty string if no image uploaded
+            }
+        };
+    </script>
+</body>
+
+</html>
