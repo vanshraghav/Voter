@@ -41,7 +41,7 @@ img.barcode {
 .epicnumber {
     position: absolute;
     top: 82px;
-    left: 155px;
+    left: 3px;
     font-weight: 550;
     font-size: 18.5px;
 }
